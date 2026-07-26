@@ -1,0 +1,85 @@
+/* stack.css — hereda variables de style.css */
+
+.stack-header {
+  padding: 2rem 0 1.5rem;
+}
+
+.stack-header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.stack-header p {
+  opacity: 0.6;
+  max-width: 50ch;
+}
+
+/* GRUPO (Análogo / Digital) */
+.stack-grupo {
+  margin-bottom: 3rem;
+}
+
+.stack-grupo:last-child {
+  margin-bottom: 4rem;
+}
+
+.stack-grupo-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.stack-grupo-label .eyebrow {
+  white-space: nowrap;
+}
+
+.stack-grupo-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--linea);
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.stack-item {
+  border: 1px solid var(--linea);
+  border-radius: 4px;
+  padding: 1.25rem;
+  text-align: center;
+  transition: border-color var(--transicion);
+}
+
+.stack-item:hover {
+  border-color: var(--acento);
+}
+
+.stack-item span {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+}
+
+/* El grupo análogo se distingue apenas: texto en cursiva, sin restarle
+   protagonismo al stack digital, que es el que representa el servicio. */
+.stack-grupo--analogo .stack-item {
+  border-style: dashed;
+  opacity: 0.85;
+}
+
+.stack-grupo--analogo .stack-item span {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 700px) {
+  .stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
