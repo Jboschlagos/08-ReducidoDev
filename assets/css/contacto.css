@@ -1,0 +1,87 @@
+/* contacto.css — hereda variables de style.css */
+
+.contacto-content {
+  padding: 2rem 0 4rem;
+  max-width: 560px;
+}
+
+.contacto-content h1 {
+  font-size: 2.4rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.contacto-intro {
+  opacity: 0.65;
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+  max-width: 48ch;
+}
+
+/* FORMULARIO */
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--tinta);
+  opacity: 0.6;
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--tinta);
+  background: var(--hueso-suave);
+  border: 1px solid var(--linea);
+  border-radius: 3px;
+  padding: 0.75rem 0.9rem;
+  outline: none;
+  transition: border-color var(--transicion);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--acento);
+}
+
+.contacto-form .btn {
+  align-self: flex-start;
+  border: none;
+  cursor: pointer;
+}
+
+/* REDES */
+.contacto-redes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--linea);
+}
+
+@media (max-width: 600px) {
+  .contacto-content {
+    max-width: 100%;
+  }
+}

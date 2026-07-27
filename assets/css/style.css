@@ -20,6 +20,7 @@ html {
   --tinta: #1a1815;
   --acento: #2f4a3c;
   --acento-suave: rgba(47, 74, 60, 0.14);
+  --acento-claro: #74ae91;
   --linea: rgba(26, 24, 21, 0.1);
   --transicion: 0.25s ease;
 

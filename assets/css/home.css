@@ -1,12 +1,27 @@
 /* home.css — hereda variables de style.css */
 
 .hero {
-  padding: 6rem 0 4rem;
+  position: relative;
+  padding: 3rem 3rem 2rem;
+  background-image:
+    linear-gradient(
+      to top,
+      rgba(26, 24, 21, 0.92) 0%,
+      rgba(26, 24, 21, 0.72) 45%,
+      rgba(26, 24, 21, 0.45) 100%
+    ),
+    url("/assets/img/fondoPagina.png");
+  background-size: cover;
+  background-position: center 35%;
+  border-radius: 6px;
+  margin-top: 1.5rem;
+  overflow: hidden;
 }
 
 .hero .eyebrow {
   display: block;
   margin-bottom: 1.25rem;
+  color: var(--acento-claro);
 }
 
 .hero h1 {
@@ -14,12 +29,14 @@
   line-height: 1.05;
   max-width: 14ch;
   margin-bottom: 1.5rem;
+  color: var(--hueso);
 }
 
 .hero p {
   font-size: 1.05rem;
   max-width: 46ch;
-  opacity: 0.75;
+  color: var(--hueso);
+  opacity: 0.85;
   margin-bottom: 2rem;
 }
 
@@ -27,6 +44,39 @@
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.hero .btn-primary {
+  background: var(--hueso);
+  color: var(--tinta);
+  border: 1px solid var(--hueso);
+}
+
+.hero .btn-primary:hover {
+  background: var(--acento);
+  border-color: var(--acento);
+  color: var(--hueso);
+}
+
+.hero .btn-outline {
+  background: transparent;
+  color: var(--hueso);
+  border: 1px solid rgba(242, 238, 230, 0.4);
+}
+
+.hero .btn-outline:hover {
+  border-color: var(--hueso);
+  color: var(--hueso);
+  background: rgba(242, 238, 230, 0.1);
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding: 5rem 1.5rem 3.5rem;
+    background-position: center 25%;
+    border-radius: 0;
+    margin-top: 0;
+  }
 }
 
 .btn {
